@@ -1,5 +1,15 @@
+import Input from './components/Input';
+
 function App() {
-  return <h1>Scorekeeper</h1>;
+  return (
+    <main>
+      <Input
+        id='game-name'
+        title='Name of game'
+        placeholder='Twiglight Empire'
+      />
+    </main>
+  );
 }
 
 export default App;

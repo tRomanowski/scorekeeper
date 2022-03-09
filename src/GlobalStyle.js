@@ -12,5 +12,8 @@ export default createGlobalStyle`
     line-height: 1.5;
   }
   
+  ul {
+      list-style: none;
+  }
 
 `;

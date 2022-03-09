@@ -9,3 +9,8 @@ const Template = (args) => <Navigation {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const Dark = Template.bind({});
+Dark.args = {
+  isDark: true,
+};
