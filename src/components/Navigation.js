@@ -1,15 +1,11 @@
 import { NavLink } from 'react-router-dom';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-export default function Navigation({ isDark }) {
+export default function Navigation() {
   return (
     <Navi>
-      <StyledNavLink isDark={isDark} to='/'>
-        Play
-      </StyledNavLink>
-      <StyledNavLink isDark={isDark} to='/history'>
-        History
-      </StyledNavLink>
+      <StyledNavLink to='/Main'>Play</StyledNavLink>
+      <StyledNavLink to='/History'>History</StyledNavLink>
     </Navi>
   );
 }
@@ -17,7 +13,8 @@ export default function Navigation({ isDark }) {
 const Navi = styled.nav`
   display: flex;
   justify-content: center;
-  width: 100%;
+  max-width: 600px;
+  margin: 20px 88px;
   padding: 0;
 `;
 
@@ -30,10 +27,8 @@ const StyledNavLink = styled(NavLink)`
   color: rgb(0, 0, 0);
   width: 100%;
 
-  ${({ isDark }) =>
-    isDark &&
-    css`
-      background-color: rgb(51, 51, 51);
-      color: rgb(255, 255, 255);
-    `}
+  &.active {
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+  }
 `;

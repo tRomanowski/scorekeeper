@@ -1,4 +1,4 @@
-import GlobalStyles from '../src/GlobalStyle';
+import GlobalStyles from '../src/GlobalStyles';
 import { MemoryRouter } from 'react-router-dom';
 
 export const parameters = {
